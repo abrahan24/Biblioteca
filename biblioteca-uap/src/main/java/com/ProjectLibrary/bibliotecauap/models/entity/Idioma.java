@@ -1,11 +1,15 @@
 package com.ProjectLibrary.bibliotecauap.models.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.Getter;
@@ -23,7 +27,10 @@ public class Idioma implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_idioma;
-    private String nom_idioma;
+    private String idioma;
+    private String estado;
+    private String abreviatura;
 
-    
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idioma", fetch = FetchType.LAZY)
+	private List<Ejemplar> ejemplares;
 }
