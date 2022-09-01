@@ -15,6 +15,21 @@ public class indexController {
 		
 		return "Principal";
 	}
+	//========= Pagina de Registro Persona=====
+
+	@RequestMapping(value  = "/registroP",method = RequestMethod.GET) // Pagina principal
+	public String RegistroPersona(){
+		
+		
+		return "RegistroPersona";
+	}
+
+	@RequestMapping(value  = "/registroL",method = RequestMethod.GET) // Pagina principal
+	public String RegistroLibro(){
+		
+		
+		return "RegistroLibro";
+	}
 
 
 
