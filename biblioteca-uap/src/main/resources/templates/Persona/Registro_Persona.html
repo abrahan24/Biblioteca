@@ -8,8 +8,6 @@
 
       </div>
 
-      
-
       <!-- =====================BARRA DE NAVEGACION===================== -->
       <div th:replace="layout/layout :: menu_lateral">
 
@@ -25,21 +23,22 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="card-title-wrap bar-primary">
-                            <h4 class="card-title" id="basic-layout-card-center">Registro de Libro</h4>
+                            <h4 class="card-title" id="basic-layout-card-center">Registro de Persona</h4>
                         </div>			
                     </div>
                     <div class="card-body">
                         <div class="px-3">
-                            <form class="form">
+                            <form class="form" action="">
                                 <div class="form-body">
     
                                     <div class="form-group">
-                                        <label for="eventRegInput1">Titulo del libro</label>
+                                        <label for="eventRegInput1">Nombre</label>
+                                        <input hidden th:field="${}">
                                         <input type="text" id="eventRegInput1" class="form-control" >
                                     </div>
     
                                     <div class="form-group">
-                                        <label for="eventRegInput2"></label>
+                                        <label for="eventRegInput2">Apellido Paterno</label>
                                         <input type="text" id="eventRegInput2" class="form-control" >
                                     </div>
     
@@ -271,16 +270,16 @@
     </aside>
     
 
-    <script src="app-assets/js/bootstrap.bundle.js"></script>
-    <script src="app-assets/vendors/js/core/jquery-3.3.1.min.js"></script>
-    <script src="app-assets/vendors/js/core/popper.min.js"></script>
-    <script src="app-assets/vendors/js/core/bootstrap.min.js"></script>
-    <script src="app-assets/vendors/js/perfect-scrollbar.jquery.min.js"></script>
-    <script src="app-assets/vendors/js/prism.min.js"></script>
-    <script src="app-assets/vendors/js/jquery.matchHeight-min.js"></script>
-    <script src="app-assets/vendors/js/screenfull.min.js"></script>
-    <script src="app-assets/vendors/js/pace/pace.min.js"></script>
-    <script src="app-assets/js/app-sidebar.js"></script>
-    <script src="app-assets/js/notification-sidebar.js"></script>
+    <script src="../../../../app-assets/js/bootstrap.bundle.js"></script>
+    <script src="../../../../app-assets/vendors/js/core/jquery-3.3.1.min.js"></script>
+    <script src="../../../../app-assets/vendors/js/core/popper.min.js"></script>
+    <script src="../../../../app-assets/vendors/js/core/bootstrap.min.js"></script>
+    <script src="../../../../app-assets/vendors/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../../../../app-assets/vendors/js/prism.min.js"></script>
+    <script src="../../../../app-assets/vendors/js/jquery.matchHeight-min.js"></script>
+    <script src="../../../../app-assets/vendors/js/screenfull.min.js"></script>
+    <script src="../../../../app-assets/vendors/js/pace/pace.min.js"></script>
+    <script src="../../../../app-assets/js/app-sidebar.js"></script>
+    <script src="../../../../app-assets/js/notification-sidebar.js"></script>
   </body>
 </html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/signin.css">
+    <title>Document</title>
+</head>
+<body class="text-center text-light" style="background: linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);">
+    <main class="form-signin w-100 m-auto">        
+        <br>
+       <!--<script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+		<lord-icon
+		    src="https://cdn.lordicon.com/mrjuyheh.json"
+		    trigger="loop"
+		    delay="2000"
+		    style="width:250px;height:250px">
+		</lord-icon>-->
+		<a  class="btn btn-primary" href="../../../../Persona/Registro_Persona">Nuevo Tipo persona</a>
+        <h1>Tipo Persona</h1>
+        <table class="table table-hover text-light">
+	        	<thead>
+	                <tr>
+	                    <!--<td><b>#</b></td>-->
+	                    <td><b>Estado</b></td>
+	                    <td><b>Tipo Persona</b></td>
+	                    <td>Operaciones</td>	                   
+	                </tr>
+	            </thead>
+            <tbody>
+                <tr th:each ="per : ${tp}" th:if="${tp.estado != 'X'}">
+                    <!--<td th:text = "${c.id_curso}"></td>-->
+                    <td th:text = "${tp.id_persona}"></td>
+                    <td th:text = "${tp.id_curso}"></td>
+                    <td th:text = "${tp.id_estado}"></td>
+                    <td><a th:href="${'../../../../editar-tp/' + tp.id_tipo_persona}" class="btn btn-warning">Editar</a><a th:href="${'../../../../eliminar-tp/' + tp.id_partcipante}" class="btn btn-danger">Eliminar</a></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>                    
+                </tr>
+            </tbody>            
+        </table>
+    </main>
+    <script src="js/bootstrap.bundle.js"></script><link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/signin.css">
+</body>
+</html>
