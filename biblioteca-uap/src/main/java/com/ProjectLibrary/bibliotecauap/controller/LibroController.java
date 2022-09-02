@@ -7,10 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/libro")
 public class LibroController {
         
-        @RequestMapping("/registroL")
-        public String RegistroLibro() {
-            
-            return "Libro/RegistroLibro";
-        }
+        
 
 }
