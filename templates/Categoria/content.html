@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head> </head>
+
+  <body>
+    <div th:fragment="content1">
+        <div class="form-group">
+            <label for="projectinput5">Sub-Categorias</label>
+            <select name="sub_categoria" class="form-control">              
+              <option th:each="subcat : ${subcategorias}" th:value="${subcat.id_subcategoria}" th:text = "${subcat.subcategoria}" th:if="${subcat.estado != 'X'}">Opciones</option >                                    
+            </select>
+          </div>
+    </div>
+  </body>
+</html>
